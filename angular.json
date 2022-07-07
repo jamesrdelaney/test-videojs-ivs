@@ -11,9 +11,13 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/test-videojs-ivs-tech",
+            "customWebpackConfig": {
+              "path": "./extra-webpack.config.js",
+              "replaceDuplicatePlugins": true
+           },
+         "outputPath": "dist/test-videojs-ivs-tech",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,13 +65,20 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
+
+          "options": 
+          {
+            "proxyConfig": "src/proxy.conf.json"
+          },
+
           "configurations": {
             "production": {
               "browserTarget": "test-videojs-ivs-tech:build:production"
             },
             "development": {
               "browserTarget": "test-videojs-ivs-tech:build:development"
+
             }
           },
           "defaultConfiguration": "development"

@@ -1,5 +1,8 @@
 import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import videojs from 'video.js';
+import { registerIVSTech } from 'amazon-ivs-player';
+
+// Used this: https://videojs.com/guides/angular/
 
 @Component({
   selector: 'app-vjs-player',
@@ -15,8 +18,10 @@ import videojs from 'video.js';
 export class VjsPlayerComponent implements OnInit, OnDestroy {
   @ViewChild('target', {static: true}) target!: ElementRef;
 
+  
   // See options: https://videojs.com/guides/options
   @Input() options!: {
+      techOrder: string[],
       fluid: boolean,
       aspectRatio: string,
       autoplay: boolean,
