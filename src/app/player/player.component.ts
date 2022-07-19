@@ -24,14 +24,14 @@ export class PlayerComponent implements OnInit {
   constructor(public restApi: RestApiService) { }
 
   ngOnInit(): void {
-    this.loadEmployees();
+    // this.loadEmployees();
   }
-  // Get employees list
-  loadEmployees() {
-    return this.restApi.getEmployees().subscribe((data: {}) => {
-      this.Employee = data;
-    });
-  }
+  // // Get employees list
+  // loadEmployees() {
+  //   return this.restApi.getEmployees().subscribe((data: {}) => {
+  //     this.Employee = data;
+  //   });
+  // }
 
 
 }

@@ -1,6 +1,6 @@
 import {Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import videojs from 'video.js';
-import { registerIVSTech } from 'amazon-ivs-player';
+// import { registerIVSTech } from 'amazon-ivs-player';
 
 // Used this: https://videojs.com/guides/angular/
 
