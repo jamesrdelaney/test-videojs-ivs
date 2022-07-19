@@ -6,18 +6,25 @@ import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 import { VjsPlayerComponent } from './vjs-player/vjs-player.component';
 import { HttpClientModule } from '@angular/common/http';
+// import {
+//   VideoJSQualityPlugin,
+//   VideoJSIVSTech,
+//   registerIVSQualityPlugin,
+//   registerIVSTech,
+//   VideoJSEvents,
+// } from 'amazon-ivs-player';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
-    VjsPlayerComponent
+    VjsPlayerComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

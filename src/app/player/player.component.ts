@@ -10,6 +10,8 @@ import { RestApiService } from '../shared/rest-api.service';
 export class PlayerComponent implements OnInit {
   Employee: any = [];
 
+  options: any;
+
   // options : any =
   // {
   //   fluid: true,
@@ -25,6 +27,17 @@ export class PlayerComponent implements OnInit {
 
   ngOnInit(): void {
     // this.loadEmployees();
+
+    this.options = {techOrder: ['AmazonIVS'], 
+                    fluid: true, 
+                    aspectRatio: '16:9', 
+                    autoplay: true, 
+                    controls: true, 
+                    sources: [
+                      { src: 'https://0053cc9aa9da.eu-west-1.playback.live-video.net/api/video/v1/eu-west-1.994576794344.channel.hNayysY7tTSf.m3u8', 
+                        type: 'application/x-mpegURL' }]
+                    }
+
   }
   // // Get employees list
   // loadEmployees() {
