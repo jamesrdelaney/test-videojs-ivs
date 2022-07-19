@@ -10,3 +10,9 @@ export declare interface CaptureEventMap {
     [CaptureEventType.CAPTURE_ANALYTICS]: "CaptureAnalytics";
     [CaptureEventType.FMP4_SEGMENT]: "FMP4Segment";
 }
+
+
+OR
+
+Add this to the compiler options for tsconfig.json"
+    "skipLibCheck": true,

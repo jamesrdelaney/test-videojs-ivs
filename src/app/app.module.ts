@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 import { VjsPlayerComponent } from './vjs-player/vjs-player.component';
 import { HttpClientModule } from '@angular/common/http';
+
 // import {
 //   VideoJSQualityPlugin,
 //   VideoJSIVSTech,
@@ -19,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     PlayerComponent,
-    VjsPlayerComponent 
+    VjsPlayerComponent
   ],
   imports: [
     BrowserModule,
